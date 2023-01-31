@@ -6,19 +6,25 @@ namespace Employee_Wage
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" **Employee Wage Computation**");
-
+            Console.WriteLine(" **Employee Wage Computation** \n");
             Random obj = new Random();
+
+            int dailyWadge = 0;
+            int fullDayhour = 8;
+            int perHourWage = 20;
+
             int check = obj.Next(0,2);
 
             if (check==0 ) 
             {
+
                 Console.WriteLine("Employee is Absent ");
             
             }
             else
             {
-                Console.WriteLine("Employee is Present ");
+                dailyWadge = perHourWage * fullDayhour;
+                Console.WriteLine("Employee is Present his Daily wage  "+dailyWadge );
 
             }
 
