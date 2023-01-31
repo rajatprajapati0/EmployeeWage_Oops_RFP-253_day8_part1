@@ -11,9 +11,10 @@ namespace Employee_Wage
 
             int dailyWadge = 0;
             int fullDayhour = 8;
+            int halfDayhour = 4;
             int perHourWage = 20;
 
-            int check = obj.Next(0,2);
+            int check = obj.Next(0,3);
 
             if (check==0 ) 
             {
@@ -21,10 +22,15 @@ namespace Employee_Wage
                 Console.WriteLine("Employee is Absent ");
             
             }
-            else
+            else if (check==1)
+            {
+                dailyWadge = perHourWage * halfDayhour;
+                Console.WriteLine("Employee is Present for half day his Daily wage  "+dailyWadge );
+
+            }  else
             {
                 dailyWadge = perHourWage * fullDayhour;
-                Console.WriteLine("Employee is Present his Daily wage  "+dailyWadge );
+                Console.WriteLine("Employee is Present for full day his Daily wage  " + dailyWadge);
 
             }
 
